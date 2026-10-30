@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<style>
+    .custom-dropdown-menu {
+        display: none;
+        position: absolute;
+        bottom: 65px;
+        left: 24px;
+        background-color: #212529;
+        border: 1px solid #495057;
+        border-radius: 0.375rem;
+        padding: 0.5rem 0;
+        list-style: none;
+        margin: 0;
+        z-index: 1050;
+        min-width: 140px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    .custom-dropdown-menu.show {
+        display: block;
+    }
+    .custom-dropdown-item {
+        display: block;
+        width: 100%;
+        padding: 0.25rem 1rem;
+        clear: both;
+        font-weight: 400;
+        color: #dee2e6;
+        text-align: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+        font-size: 0.875rem;
+    }
+    .custom-dropdown-item:hover {
+        background-color: #343a40;
+        color: #fff;
+    }
+    .custom-divider {
+        height: 0;
+        margin: 0.5rem 0;
+        overflow: hidden;
+        border-top: 1px solid #495057;
+    }
+    /* Фикс для курсора */
+    .dropdown-trigger {
+        cursor: pointer;
+    }
+
+
+/* Эффект при наведении — синяя полоса */
+.d-flex.flex-column.gap-3 a:hover {
+    color: #fff !important;
+    background-color: #0d6efd; /* Синий цвет Bootstrap */
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 min-vh-100 p-4 d-flex flex-column justify-content-between bg-black fg-white" style="position: relative;">
+
+            <div>
+                <h3 class="mb-5 text-secondary ">Меню</h3>
+                <div class="d-flex flex-column gap-3">
+                    <a href="#" class=" text-decoration-none fw-bold">🏠Главная</a>
+                    <a href="#" class=" text-decoration-none">📂Категории</a>
+                    <a href="#" class=" text-decoration-none">📦Заказы</a>
+                    <a href="#" class=" text-decoration-none">📞Контакты</a>
+                </div>
+            </div>
+
+            <!-- БЛОК ПОЛЬЗОВАТЕЛЯ -->
+            <div class="pt-3 border-top border-secondary">
+                <div class="d-flex align-items-center text-decoration-none dropdown-trigger link-secondary" id="customDropdownBtn">
+                    <span class="avatar">
+                        <img class="avatar-img rounded-circle" src="../static/avatar.jpg" alt="mdo" style="width: 40px; height: 40px; object-fit: cover;">
+                    </span>
+                    <span class="ms-2 small text-secondary">Пользователь</span>
+                </div>
+
+
+                <ul class="custom-dropdown-menu" id="customDropdownMenu">
+                    <li><a class="custom-dropdown-item" href="#">Профиль</a></li>
+                    <li><div class="custom-divider"></div></li>
+                    <li><a class="custom-dropdown-item" href="#">Выход</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+       <!-- Правая сторона -->
+        <div class="col-10 pt-5 px-4">
+
+            <div class="text-center my-10">
+                <h2 class="fw-bold">Главная</h2>
+                <p class="text-muted">Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+    <div class="card shadow-sm" style="aspect-ratio: 1 / 1; max-width: 240px; width: 100%;">
+        <div class="card-body text-center d-flex flex-column p-3">
+            <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+                <h4 class="card-title fw-semibold fs-5 mb-1">Товар 1</h4>
+                <h2 class="card-title my-1 text-primary fs-4">50руб кг</h2>
+                <p class="card-text text-muted small mb-0">Лук</p>
+            </div>
+            <a href="#" class="btn btn-sm d-block mx-auto w-75 mt-auto" style="border: 1px solid #0d6efd; color: #0d6efd; background-color: transparent;">Купить</a>
+
+        </div>
+    </div>
+</div>
+                <div class="col d-flex justify-content-center">
+    <div class="card shadow-sm" style="aspect-ratio: 1 / 1; max-width: 240px; width: 100%;">
+        <div class="card-body text-center d-flex flex-column p-3">
+            <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+                <h4 class="card-title fw-semibold fs-5 mb-1">Товар 2</h4>
+                <h2 class="card-title my-1 text-primary fs-4">150руб кг</h2>
+                <p class="card-text text-muted small mb-0">Чеснок</p>
+            </div>
+            <a href="#" class="btn btn-sm d-block mx-auto w-75 mt-auto" style="border: 1px solid #0d6efd; color: #0d6efd; background-color: transparent;">Купить</a>
+
+        </div>
+    </div>
+</div>
+                <div class="col d-flex justify-content-center">
+    <div class="card shadow-sm" style="aspect-ratio: 1 / 1; max-width: 240px; width: 100%;">
+        <div class="card-body text-center d-flex flex-column p-3">
+            <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+                <h4 class="card-title fw-semibold fs-5 mb-1">Товар 3</h4>
+                <h2 class="card-title my-1 text-primary fs-4">200руб 0.5кг</h2>
+                <p class="card-text text-muted small mb-0">Сельдерей</p>
+            </div>
+            <a href="#" class="btn btn-sm d-block mx-auto w-75 mt-auto" style="border: 1px solid #0d6efd; color: #0d6efd; background-color: transparent;">Купить</a>
+
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('customDropdownBtn');
+        const menu = document.getElementById('customDropdownMenu');
+
+        // Переключение меню при клике на Пользователь
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('show');
+        });
+
+        // Закрытие меню при клике в любое другое место экрана
+        document.addEventListener('click', function() {
+            menu.classList.remove('show');
+        });
+    });
+</script>
+</body>
+</html>
