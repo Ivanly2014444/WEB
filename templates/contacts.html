@@ -93,61 +93,66 @@
                     <li><a class="custom-dropdown-item" href="#">Выход</a></li>
                 </ul>
             </div>
-
         </div>
 
        <!-- Правая сторона -->
-        <div class="col-10 pt-5 px-4">
+       <div class="col-10 p-4">
 
-            <div class="text-center my-10">
-                <h2 class="fw-bold">Главная</h2>
-                <p class="text-muted">Вы находитесь на сайте, предназначенном для продажи товаров.</p>
-            </div>
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-    <div class="card shadow-sm" style="aspect-ratio: 1 / 1; max-width: 240px; width: 100%;">
-        <div class="card-body text-center d-flex flex-column p-3">
-            <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                <h4 class="card-title fw-semibold fs-5 mb-1">Товар 1</h4>
-                <h2 class="card-title my-1 text-primary fs-4">50руб кг</h2>
-                <p class="card-text text-muted small mb-0">Лук</p>
-            </div>
-            <a href="#" class="btn btn-sm d-block mx-auto w-75 mt-auto" style="border: 1px solid #0d6efd; color: #0d6efd; background-color: transparent;">Купить</a>
-
-        </div>
+    <!-- Большой отступ сверху для заголовка -->
+    <div class="text-center mb-5" style="margin-top: 80px;">
+        <h1 class="fw-normal">Контакты</h1>
     </div>
-</div>
-                <div class="col d-flex justify-content-center">
-    <div class="card shadow-sm" style="aspect-ratio: 1 / 1; max-width: 240px; width: 100%;">
-        <div class="card-body text-center d-flex flex-column p-3">
-            <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                <h4 class="card-title fw-semibold fs-5 mb-1">Товар 2</h4>
-                <h2 class="card-title my-1 text-primary fs-4">150руб кг</h2>
-                <p class="card-text text-muted small mb-0">Чеснок</p>
-            </div>
-            <a href="#" class="btn btn-sm d-block mx-auto w-75 mt-auto" style="border: 1px solid #0d6efd; color: #0d6efd; background-color: transparent;">Купить</a>
 
-        </div>
-    </div>
-</div>
-                <div class="col d-flex justify-content-center">
-    <div class="card shadow-sm" style="aspect-ratio: 1 / 1; max-width: 240px; width: 100%;">
-        <div class="card-body text-center d-flex flex-column p-3">
-            <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                <h4 class="card-title fw-semibold fs-5 mb-1">Товар 3</h4>
-                <h2 class="card-title my-1 text-primary fs-4">200руб 0.5кг</h2>
-                <p class="card-text text-muted small mb-0">Сельдерей</p>
-            </div>
-            <a href="#" class="btn btn-sm d-block mx-auto w-75 mt-auto" style="border: 1px solid #0d6efd; color: #0d6efd; background-color: transparent;">Купить</a>
+    <!-- justify-content-around распределит блоки с красивыми отступами по бокам -->
+    <div class="row g-5 justify-content-around">
 
-        </div>
-    </div>
-</div>
+        <!-- ЛЕВАЯ КОЛОНКА: Жестко задаем col-5 для формы -->
+        <div class="col-5">
+            <!-- Классы border и shadow-sm добавят рамку и легкую тень как на макете -->
+            <div class="card p-4 border shadow-sm">
+                <form>
+                    <!-- Поле: Имя -->
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label text-muted small">Имя</label>
+                        <input type="text" class="form-control" id="inputName">
+                    </div>
+
+                    <!-- Поле: Почта -->
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label text-muted small">Почта</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted">@</span>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                    </div>
+
+                    <!-- Поле: Сообщение -->
+                    <div class="mb-4">
+                        <label for="inputTextarea" class="form-label text-muted small">Сообщение</label>
+                        <textarea class="form-control" id="inputTextarea" rows="4"></textarea>
+                    </div>
+
+                    <!-- Кнопка отправки -->
+                    <button type="submit" class="btn btn-primary px-4">Отправить</button>
+                </form>
             </div>
         </div>
+
+        <!-- ПРАВАЯ КОЛОНКА: Жестко задаем col-5 для текста -->
+        <div class="col-5 d-flex flex-column justify-content-start pt-2">
+            <h3 class="fw-bold mb-3 fs-4">Наши контакты</h3>
+
+            <p class="text-secondary" style="line-height: 1.6; font-size: 0.95rem;">
+                Здесь указаны контактные данные
+            </p>
+
+            <p class="text-muted small mt-3">
+                Здесь указана информация интересующая пользователей
+            </p>
+        </div>
+
     </div>
 </div>
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -166,5 +171,5 @@
         });
     });
 </script>
-</body>
+ </body>
 </html>
